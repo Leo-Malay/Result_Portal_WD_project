@@ -1,0 +1,32 @@
+.result {
+    margin-top: 50px;
+}
+table {
+    width: 80%;
+    border: 1px solid #000;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 14px;
+}
+th,
+td {
+    padding: 5px;
+}
+#th1 {
+    width: 100px;
+}
+#th2 {
+    width: 300px;
+}
+#th3 {
+    width: 250px;
+}
+#th4 {
+    width: 250px;
+}
+#th5 {
+    width: 100px;
+}
+#logo {
+    width: 100%;
+}
