@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php include("./db.php")?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +9,17 @@
     <title>Result</title>
     <link rel="stylesheet" href="./CSS/general.css">
     <link rel="stylesheet" href="./CSS/result.css">
+    <link rel="stylesheet" href="./CSS/head_foot.css">
 </head>
 <body>
-    <form action="./Result.php" method="POST">
-        <input type="text" name="enrollment" id="enrollment" placeholder="Enrollment">
-        <input type="Submit" value="Go">
-    </form>
+    <?php include("./components/header.php")?>
+    <div class="card">
+        <p id="title">Result</p>
+        <form action="./Result.php" method="POST">
+            <input type="text" name="enrollment" id="enrollment" placeholder="Enrollment"  required>
+            <input type="Submit" value="Go">
+        </form>
+    </div>
+    <?php include("./components/footer.php")?>
 </body>
 </html>

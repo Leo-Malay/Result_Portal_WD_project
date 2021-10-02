@@ -1,9 +1,8 @@
 .result {
-    margin-top: 50px;
+    margin: 50px auto;
 }
 table {
     width: 80%;
-    border: 1px solid #000;
     border-spacing: 0;
     text-align: center;
     font-size: 14px;
@@ -29,4 +28,7 @@ td {
 }
 #logo {
     width: 100%;
+}
+table tr#footer {
+    font-size: 10px;
 }

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php include("./db.php")?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +9,14 @@
     <title>Result</title>
     <link rel="stylesheet" href="./CSS/general.css">
     <link rel="stylesheet" href="./CSS/result.css">
+    <link rel="stylesheet" href="./CSS/head_foot.css">
 </head>
 <body>
+    <?php include("./components/header.php")?>
     <center>
         <div class="result" id="result">
+            <center>
+        <link rel="stylesheet" href="./CSS/result.css">
             <table border=1>
                 <tr id="header">
                     <td colspan=12><img src="./IMG/ADIT_default.png" alt="ADIT" id="logo"/></td>
@@ -71,10 +76,27 @@
                 ?>
                 <!-- SUBJECT WITH MARKS END -->
                 <tr id="footer">
-                    <td colspan=12>@All Rights Reserved</td>
+                    <td colspan=12><strong>A. D. Patel Institute of Technology</strong>
+                        <br>
+                        Incase of any dispute or error, feel free to contact us at <a href="mailto:">result_adit@adit.ac.in</a>
+                        <br>
+                        Result Declared on <strong><?php echo date("d-M-Y");?></strong>
+                    </td>
                 </tr>
             </table>
+            </center>
         </div>
+        <input type="button" value="Print" onclick="print()">
     </center>
+    <?php include("./components/footer.php")?>
+    <script>
+        function print(){
+            var divToPrint=document.getElementById('result');
+            newWin= window.open('');
+            newWin.document.write(divToPrint.outerHTML);
+            newWin.print();
+            newWin.close();
+        }
+    </script>
 </body>
 </html>
